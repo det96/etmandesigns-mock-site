@@ -1,6 +1,3 @@
-import "@fontsource-variable/outfit";
-import "./style.css";
-
 const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
 const panel = document.querySelector(".nav-panel");
