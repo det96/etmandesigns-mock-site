@@ -1632,6 +1632,7 @@ form .btn-primary {
 
 @media (prefers-reduced-motion: reduce) {
   html {
+    /* Native anchor jumps stay instant. main.js still glides in-page links. */
     scroll-behavior: auto;
   }
 
