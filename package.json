@@ -1,0 +1,18 @@
+{
+  "name": "etmandesigns",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Review mock of the EtmanDesigns one-page studio site. Not for public launch.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "@fontsource-variable/outfit": "^5.3.0"
+  }
+}
