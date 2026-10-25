@@ -22,7 +22,11 @@ Careers buttons open the live posting and the live application PDF on `mid-state
 
 ## Sources (fetched 25 October 2026)
 
-Logo, unchanged: [https://mid-stateplumbing.net/logo.png](https://mid-stateplumbing.net/logo.png) → `assets/logo.png`.
+Their current logo, kept for the before view: [https://mid-stateplumbing.net/logo.png](https://mid-stateplumbing.net/logo.png) → `assets/logo.png`.
+
+The concept page itself uses **Concept A, State Line** in the header and the footer. Both bars are navy, so the image is the reversed lockup `logo-concepts/a-state-line/logo-header.svg` (no extra background plate). The favicon is that concept’s icon: the SVG, a 32px PNG, and a 180px apple-touch icon. Open the file from disk; the icon links are relative.
+
+During the pitch, `index.html?logo=original` puts `assets/logo.png` back in the header, the footer, and the favicon. `?logo=b`, `?logo=c`, and `?logo=d` still preview the other concepts. `?logo=a` is the same as opening the page with no flag.
 
 Colors taken from that page’s CSS:
 

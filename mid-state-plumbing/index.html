@@ -8,7 +8,25 @@
   <meta name="theme-color" content="#1a4a61">
   <meta name="description" content="Concept redesign for Mid-State Plumbing, Inc., a commercial construction plumbing contractor in DeBary, Florida. Not the official website.">
   <title>Mid-State Plumbing, Inc. — Concept</title>
-  <link rel="icon" href="assets/logo.png" type="image/png">
+  <script>
+    (function () {
+      var choice = "";
+      try {
+        choice = new URLSearchParams(window.location.search).get("logo") || "";
+      } catch (err) {
+        choice = "";
+      }
+      if (choice === "original") {
+        document.write('<link rel="icon" href="assets/logo.png" type="image/png">');
+      } else {
+        document.write(
+          '<link rel="icon" href="logo-concepts/a-state-line/icon.svg" type="image/svg+xml">' +
+          '<link rel="icon" href="logo-concepts/a-state-line/icon-32.png" type="image/png" sizes="32x32">' +
+          '<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">'
+        );
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +36,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="logo" href="#top">
-        <img src="assets/logo.png" alt="Mid-State Plumbing, Inc." width="576" height="418">
+        <img src="logo-concepts/a-state-line/logo-header.svg" alt="Mid-State Plumbing, Inc.">
       </a>
       <a class="header-call" href="tel:+14078414500">Call</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -537,7 +555,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <img class="footer-logo" src="assets/logo.png" alt="" width="576" height="418">
+        <img class="footer-logo" src="logo-concepts/a-state-line/logo-header.svg" alt="">
         <address>
           Mid-State Plumbing, Inc.<br>
           210 Springview Commerce Dr, Suite 140<br>

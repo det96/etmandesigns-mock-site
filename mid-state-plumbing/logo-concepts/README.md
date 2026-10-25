@@ -1,6 +1,6 @@
 # Logo concepts for Mid-State Plumbing, Inc.
 
-Four refresh directions for an EtmanDesigns pitch. These are concepts only. They do not replace `assets/logo.png`, nothing here is deployed, and the business has not been contacted.
+Four refresh directions for an EtmanDesigns pitch. Concept A is now the logo on the concept page. The other three stay here as alternates. `assets/logo.png` is still their current logo, for the before view. Nothing here is deployed, and the business has not been contacted.
 
 The company name on every lockup is exactly **Mid-State Plumbing, Inc.** There is no tagline, year, or claim. The orange bar in the panhandle is a pipe coupling, not a map of where they work.
 
@@ -13,7 +13,9 @@ Wordmarks are outlined from Inter (SIL Open Font License). The SVG files do not 
 - Full lockups: `logo-light.svg` on white, `logo-navy.svg` on navy. PNG previews are 1200px wide.
 - Square icon: `icon.svg`, with `icon.png` at 512px. `icon-32.png` and `icon-16.png` are the same icon at those sizes.
 - Side-by-side board: `comparison.png` (source layout in `comparison.html`).
-- Header test, without changing the real logo: open `../index.html?logo=a` (or `b`, `c`, `d`). The query only swaps the header image.
+- The concept page (`../index.html`) already shows Concept A in the header and footer. `?logo=a` is the same thing.
+- Before and after: `../index.html?logo=original` swaps the header, footer, and favicon back to `assets/logo.png`.
+- Other directions: `../index.html?logo=b`, `?logo=c`, or `?logo=d`.
 
 ## Concept A — State Line
 
@@ -33,9 +35,9 @@ A chamfered square stamp, the kind of plate that shows up on a submittal or a tr
 
 ## Recommendation
 
-Use **Concept A, State Line**, in the header (`index.html?logo=a`).
+**Concept A, State Line, is the default** on the concept page, in the header and the footer. No query flag is required. `index.html?logo=original` shows their current logo beside it for the pitch.
 
-They already identify as a Florida firm, and the current logo is the state. State Line keeps that recognition and makes it solid enough for a general-contractor bid set, a hard hat, and a small icon. The orange piece is a coupling, not a service-area line. Concept B is the one to show second if they want the logo and the website drawings to be the same picture. It is also the clearest of the four at 16px.
+They already identify as a Florida firm, and the current logo is the state. State Line keeps that recognition and makes it solid enough for a general-contractor bid set, a hard hat, and a small icon. The orange piece is a coupling, not a service-area line. Concept B is the one to show second if they want the logo and the website drawings to be the same picture. It is also the clearest of the four at 16px. Open it with `index.html?logo=b`.
 
 ## Small-size check
 

@@ -7,7 +7,8 @@
     a: "logo-concepts/a-state-line/logo-header.svg",
     b: "logo-concepts/b-schematic/logo-header.svg",
     c: "logo-concepts/c-monogram/logo-header.svg",
-    d: "logo-concepts/d-field-badge/logo-header.svg"
+    d: "logo-concepts/d-field-badge/logo-header.svg",
+    original: "assets/logo.png"
   };
   var logoChoice = "";
   try {
@@ -15,12 +16,17 @@
   } catch (err) {
     logoChoice = "";
   }
-  if (logoFiles[logoChoice]) {
-    var logoImg = document.querySelector(".logo img");
-    if (logoImg) {
-      logoImg.src = logoFiles[logoChoice];
-      logoImg.removeAttribute("width");
-      logoImg.removeAttribute("height");
+  if (logoFiles[logoChoice] && logoChoice !== "a") {
+    var logoNodes = document.querySelectorAll(".logo img, .footer-logo");
+    for (var i = 0; i < logoNodes.length; i++) {
+      logoNodes[i].src = logoFiles[logoChoice];
+      if (logoChoice === "original") {
+        logoNodes[i].setAttribute("width", "576");
+        logoNodes[i].setAttribute("height", "418");
+      } else {
+        logoNodes[i].removeAttribute("width");
+        logoNodes[i].removeAttribute("height");
+      }
     }
   }
 
