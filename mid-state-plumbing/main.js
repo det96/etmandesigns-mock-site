@@ -3,6 +3,27 @@
 
   document.documentElement.classList.add("js");
 
+  var logoFiles = {
+    a: "logo-concepts/a-state-line/logo-header.svg",
+    b: "logo-concepts/b-schematic/logo-header.svg",
+    c: "logo-concepts/c-monogram/logo-header.svg",
+    d: "logo-concepts/d-field-badge/logo-header.svg"
+  };
+  var logoChoice = "";
+  try {
+    logoChoice = new URLSearchParams(window.location.search).get("logo") || "";
+  } catch (err) {
+    logoChoice = "";
+  }
+  if (logoFiles[logoChoice]) {
+    var logoImg = document.querySelector(".logo img");
+    if (logoImg) {
+      logoImg.src = logoFiles[logoChoice];
+      logoImg.removeAttribute("width");
+      logoImg.removeAttribute("height");
+    }
+  }
+
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
