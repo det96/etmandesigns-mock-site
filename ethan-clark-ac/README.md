@@ -24,7 +24,7 @@ The narrator on the current about page is not named there, so this concept does 
 ## Placeholders to fill
 
 - [ ] **Google review quotes (3 cards).** Each card says “Customer review to be added from Google”. Paste real Google text only. Do not write or paraphrase reviews.
-- [ ] **Recheck the rating before anything public.** The hero says `5.0 · 173 Google reviews` from this brief. Update the number if Google has changed.
+- [ ] **Recheck the rating before anything public.** The hero shows 5.0 and 173 Google reviews from this brief. Update both if Google has changed.
 - [ ] **Shop photo.** Labeled “Shop photo to be added”. Use a real photo of the downtown shop. No stock photos of people.
 - [ ] **Second photo.** Labeled “Photo to be added”. Team or job photo from the client, or remove the frame.
 - [ ] **Hours.** Contact row says “Hours to be confirmed”. The current site does not list hours.
