@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
@@ -279,9 +281,39 @@
     });
   }
 
+  function markReveals() {
+    var nodes = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+    if (!nodes.length) return;
+    function arm(el) {
+      el.classList.add("is-in");
+    }
+    nodes.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.94 && rect.bottom > 0) arm(el);
+    });
+    if (!("IntersectionObserver" in window)) {
+      nodes.forEach(arm);
+      return;
+    }
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          arm(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+    );
+    nodes.forEach(function (el) {
+      if (!el.classList.contains("is-in")) observer.observe(el);
+    });
+  }
+
   syncHeader();
   syncNavA11y();
   setCurrent();
+  markReveals();
 
   if (location.hash) {
     var openEl = document.getElementById(location.hash.replace(/^#/, ""));

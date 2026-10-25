@@ -36,6 +36,8 @@ Colors taken from that page’s CSS:
 
 The logo file is a white wordmark and a pipe drawn in about `#185878` (sampled from the PNG) on a transparent background. It is shown on `#1a4a61` so the wordmark stays visible.
 
+The concept adds one accent, safety orange `#E85D04`, for buttons, rules, icons, and the hero pipe drawing. Button labels use `#1A1208` so the type stays readable on that orange. Small orange text on light backgrounds uses `#C2410C`. Highlights on navy use `#FFB07A`. There is no stock photograph. The hero drawing and the project thumbnails are original SVG line art, not pictures of Mid-State’s work. The hero labels that drawing “Schematic. Not a project photo.”
+
 Hours, receptionist line, appointment note, phone, address, and the careers posting (including pay, requirements, benefits, and the application link) are taken from [https://mid-stateplumbing.net/](https://mid-stateplumbing.net/) and [https://mid-stateplumbing.net/careers.html](https://mid-stateplumbing.net/careers.html). The application file linked from that page is [https://mid-stateplumbing.net/english-application.pdf](https://mid-stateplumbing.net/english-application.pdf).
 
 Also used, as given for this concept: the office is in DeBary, Florida, north of Orlando, and the buyers are general contractors. The company does commercial construction plumbing only.
@@ -46,8 +48,8 @@ On the page these read as tidy pills (“To be added”), photo frames, or the t
 
 ### Three project cards (each card)
 
-- **Featured project** — the real project name
-- **Project photo** — a photograph of that project
+- **Featured project** — the real project name. The 01 / 02 / 03 marks are layout slots, not project numbers.
+- **Project photo** — a photograph of that project. The blueprint drawing is a stand-in, not their work. The “Commercial” tag only repeats that they do commercial construction.
 - **Project type** — building or project type
 - **Location** — where that project is
 - **Client** — general contractor or client, only if they are willing to be named
@@ -56,6 +58,17 @@ On the page these read as tidy pills (“To be added”), photo frames, or the t
 
 - **Other systems** — plumbing systems beyond water supply, waste, and vent, if they want them listed
 - **Typical project size** — the size range they want to show
+
+### Why GCs choose us (stat band)
+
+These sit where a number would go. They read “To be added”. Nothing here is counted or animated.
+
+- **Years in business**
+- **Projects completed**
+- **Crew size** — the careers posting’s two-person crew is that one job, not a company headcount
+- **References**
+
+Years in business, crew size, and references are the same blanks as on the prequalification sheet.
 
 ### Prequalification sheet
 
