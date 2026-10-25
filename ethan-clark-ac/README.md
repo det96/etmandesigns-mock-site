@@ -2,7 +2,7 @@
 
 Private pitch mock-up for EtmanDesigns (David Etman). This is not the live site, it is not deployed, and it does not use analytics.
 
-Preview it the way David will: double-click `index.html` so it opens in desktop Chrome (`file://`). No build step and no network fonts. Syne and Outfit are self-hosted in `fonts/` under the SIL Open Font License (see the OFL text files beside the fonts).
+Preview it the way David will: double-click `index.html` so it opens in desktop Chrome (`file://`). No build step and no network fonts. Inter is self-hosted in `fonts/` under the SIL Open Font License (see `fonts/Inter-OFL.txt`).
 
 The page sends `noindex, nofollow`. Do not turn on GitHub Pages for this folder.
 
@@ -46,4 +46,4 @@ The narrator on the current about page is not named there, so this concept does 
 - `styles.css` — layout and the ice / Houston-sun theme
 - `script.js` — menu, demo form, scroll fade-ins, and in-page smooth scrolling
 - `favicon.svg`, `favicon.png`
-- `fonts/` — Syne and Outfit, plus their OFL licenses
+- `fonts/` — Inter (weights 400–800) and its OFL license
