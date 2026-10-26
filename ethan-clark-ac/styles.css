@@ -570,11 +570,34 @@ a.header-extra {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: 36px;
-  align-items: stretch;
+  grid-template-areas:
+    "copy art"
+    "reviews art"
+    "license art";
+  column-gap: 36px;
+  row-gap: 18px;
+  align-items: start;
   padding: 42px 0 78px;
   min-height: calc(100vh - var(--header-h));
   min-height: calc(100dvh - var(--header-h));
+}
+
+.hero-copy {
+  grid-area: copy;
+}
+
+.hero-art {
+  grid-area: art;
+}
+
+.hero-reviews {
+  grid-area: reviews;
+  justify-self: start;
+}
+
+.hero-license {
+  grid-area: license;
+  justify-self: start;
 }
 
 .eyebrow {
@@ -648,7 +671,7 @@ a.header-extra {
 }
 
 .hero-copy {
-  align-self: center;
+  align-self: start;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -670,7 +693,7 @@ a.header-extra {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 12px;
-  margin: 0 0 var(--gap-actions);
+  margin: 0;
 }
 
 .license-badge {
@@ -1592,53 +1615,84 @@ html.js-anim .reveal.is-in {
 }
 
 .story {
-  display: grid;
-  gap: 14px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-.story blockquote {
-  margin: 0;
-  padding: 0 0 0 14px;
-  border-left: 3px solid var(--sun);
+.story::before {
+  content: "\201C";
+  display: block;
+  margin: 0 0 0.15em;
+  color: var(--sun);
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: clamp(4.25rem, 8vw, 6rem);
+  line-height: 0.72;
+  letter-spacing: 0;
 }
 
-.story blockquote p {
-  margin: 0;
+.story p {
+  margin: 0 0 1rem;
   color: var(--ink);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: var(--lh-body);
 }
 
-.real-photo {
+.story p:last-child {
+  margin-bottom: 0;
+}
+
+.family-photo {
   margin: 0;
-  padding: 16px;
-  border-radius: 24px;
+  overflow: hidden;
+  border-radius: 28px;
   background: #fff;
   border: 1px solid rgba(12, 52, 86, 0.1);
   box-shadow: 0 10px 30px rgba(7, 21, 37, 0.05);
 }
 
-.real-photo img {
+.family-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.family-photo figcaption {
+  margin: 0;
+  padding: 12px 16px 14px;
+  color: var(--navy);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dispatch-inset {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 12px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(12, 52, 86, 0.1);
+}
+
+.dispatch-inset img {
   display: block;
   width: 120px;
   height: 90px;
-  margin-inline: auto;
-  border-radius: 8px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  object-fit: none;
 }
 
-.real-photo figcaption {
-  margin: 12px 0 0;
-  text-align: center;
+.dispatch-inset figcaption {
+  margin: 0;
   color: var(--navy);
   font-weight: 700;
   line-height: 1.3;
-}
-
-.real-photo small {
-  display: block;
-  margin-top: 6px;
-  text-align: center;
-  color: var(--muted);
-  font-weight: 500;
-  line-height: 1.5;
 }
 
 .neighborhoods {
@@ -1912,12 +1966,25 @@ html.js-anim .reveal.is-in {
     grid-template-columns: 1fr;
   }
 
+  .hero-grid {
+    grid-template-areas:
+      "copy"
+      "art"
+      "reviews"
+      "license";
+    row-gap: 16px;
+  }
+
   .hero-art {
     justify-content: center;
   }
 
+  .hero-photo {
+    width: min(100%, 420px);
+  }
+
   .hero-photo img {
-    height: 360px;
+    height: 340px;
   }
 
   .hero-grid {
@@ -1962,7 +2029,34 @@ html.js-anim .reveal.is-in {
     grid-template-columns: 1fr;
   }
 
-  .hero-actions,
+  .hero {
+    padding: 0;
+  }
+
+  .hero-grid {
+    padding-top: 12px;
+    row-gap: 12px;
+  }
+
+  .rating-hero,
+  .lede {
+    margin-bottom: 12px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .hero-actions > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .text-actions {
+    display: flex;
+  }
+
   .call-actions,
   .form-actions {
     flex-direction: column;
