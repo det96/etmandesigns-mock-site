@@ -570,34 +570,11 @@ a.header-extra {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  grid-template-areas:
-    "copy art"
-    "reviews art"
-    "license art";
   column-gap: 36px;
-  row-gap: 18px;
   align-items: start;
   padding: 42px 0 78px;
   min-height: calc(100vh - var(--header-h));
   min-height: calc(100dvh - var(--header-h));
-}
-
-.hero-copy {
-  grid-area: copy;
-}
-
-.hero-art {
-  grid-area: art;
-}
-
-.hero-reviews {
-  grid-area: reviews;
-  justify-self: start;
-}
-
-.hero-license {
-  grid-area: license;
-  justify-self: start;
 }
 
 .eyebrow {
@@ -675,8 +652,24 @@ a.header-extra {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 20px;
   min-width: 0;
   width: 100%;
+}
+
+.hero-copy > .eyebrow,
+.hero-copy > .rating-hero,
+.hero-copy > h1,
+.hero-copy > .lede,
+.hero-copy > .hero-actions {
+  margin: 0;
+}
+
+.hero-follow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .lede {
@@ -1967,12 +1960,28 @@ html.js-anim .reveal.is-in {
   }
 
   .hero-grid {
-    grid-template-areas:
-      "copy"
-      "art"
-      "reviews"
-      "license";
-    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-actions,
+  .hero-art,
+  .hero-follow {
+    width: 100%;
+  }
+
+  .hero-art {
+    order: 2;
+  }
+
+  .hero-follow {
+    order: 3;
   }
 
   .hero-art {
@@ -2035,12 +2044,7 @@ html.js-anim .reveal.is-in {
 
   .hero-grid {
     padding-top: 12px;
-    row-gap: 12px;
-  }
-
-  .rating-hero,
-  .lede {
-    margin-bottom: 12px;
+    gap: 20px;
   }
 
   .hero-actions {
